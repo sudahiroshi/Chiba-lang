@@ -1,0 +1,14 @@
+//Eventクラスの宣言
+Event.new -> ev; 
+
+//スプライトの作成
+numbers.new -> number;
+rices.new -> rice;
+
+//メッセージを受け取ったとき
+ev.receive "message",(msg) => {
+  msg.match
+    "リセット".case 
+    "次のフレーム".case
+    "前のフレーム".case
+}
