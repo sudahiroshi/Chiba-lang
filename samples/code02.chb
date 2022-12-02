@@ -1,0 +1,38 @@
+Event.new -> ev;
+//ステージ生成する際の書き方が未定
+stage.new;
+
+animals.new -> cat;
+animals.new -> bear;
+
+//ステージ
+
+ev.click (obj) => {
+  //ステージの背景もスプライトのコスチュームと同様に番号で管理する 1:部屋 2:雪
+  stage.background 1; 
+  3 |> wait;
+  ev.send "部屋の中の会話";
+  stage.background 2;
+}
+
+//ネコ
+
+ev.receive "message",(msg) => {
+  //2秒間言う
+  cat.say "つまらないね",2;
+  ev.send "つまらない";
+}
+
+stage.background = 2.if {
+  cat.say "さむい!!";
+}
+
+//熊
+
+ev.receive "message",(msg) => {
+  bear.say "そとであそぼう!",2;
+}
+
+stage.baclground = 2.if {
+  bear.say "気持ちいい";
+}
