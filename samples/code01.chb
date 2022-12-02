@@ -6,7 +6,7 @@ numbers.new -> number;
 rices.new -> rice;
 
 //旗が押されたとき
-ev.clicked (obj) => {
+ev.click (obj) => {
   obj = "flag".if { ev.send "リセット"; }
 }
 /*
