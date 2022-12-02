@@ -1,0 +1,28 @@
+https://scratch.mit.edu/projects/65221658/editor/
+
+Event.new -> ev;
+Know.new -> kn;
+splite.new size:100 -> main;
+
+ev.click "flag",() => {
+    true.while {
+        kn.keypress = "rightarrow".if{
+            main.walk 5;
+        } 
+    }
+}
+
+ev.click "flag",() => {
+    true.while {
+        kn.keypress = "rightarrow".if{
+            main.walk -5;
+        } 
+    }
+}
+
+ev.click "flag",() => {
+    true.while {
+        main.next_costume;
+        0.2 |> wait;
+    }
+}
