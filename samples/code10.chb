@@ -1,0 +1,34 @@
+https://scratch.mit.edu/projects/24182947/editor/
+
+Event.new -> ev;
+splite.new x:-96, y:33, turn:90 -> wizard;
+splite.new x:47, y:-29, turn:-177 -> lightning;
+splite.new x:174, y:-34, turn:-96 -> ghost1;
+splite.new x:95, y:37, turn:-96 -> ghost2;
+
+ev.click "flag",() => {
+    true.while {
+        lightning.show;
+        1 |> wait;
+        lightning.hide;
+        0.2 |> wait;
+    }
+}
+
+ev.click "flag",() => {
+    0 -> lp;
+    true.while {
+        lp + 10 -> lp;
+        lp |> sin -> changeY;
+        ghost1.y + changeY -> ghost1.y;
+    }
+}
+
+ev.click "flag",() => {
+    120 -> lp;
+    true.while {
+        lp + 10 -> lp;
+        lp |> sin -> changeY;
+        ghost2.y + changeY -> ghost2.y;
+    }
+}
