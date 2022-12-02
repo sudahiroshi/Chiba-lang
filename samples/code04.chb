@@ -1,0 +1,25 @@
+https://scratch.mit.edu/projects/24125075/editor/
+
+Event.new -> ev;
+
+splite.new name:"balloon", x:0, y:-75, hide -> balloon;
+
+ev.click (name) => {
+    name.match {
+        "green_flag".case {
+            0 -> score;
+            15 -> time;
+            time > 0.while {
+                
+            }
+        }
+        "balloon".case {
+            time > 0　|> if {
+                score + 1 -> score;
+                balloon.sound "pop";
+            }
+        }
+    }
+}
+
+//クローンの書き方をまだ決めていない
