@@ -1,0 +1,11 @@
+https://scratch.mit.edu/projects/110343823/editor/
+
+Event.new -> ev;
+animal.new -> cat;
+
+ev.click "flag",() => {
+    //乱数生成
+    -240~240 |> random -> x_position;
+    -180~180 |> random -> y_position;    
+    cat.move x:x_position, y:y_position;
+}
