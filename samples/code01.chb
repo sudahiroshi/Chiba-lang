@@ -9,6 +9,9 @@ rices.new -> rice;
 ev.clicked (obj) => {
   obj = "flag".if { ev.send "リセット"; }
 }
+/*
+ev.clicked "flag",() => {  }
+*/
 
 //キーが押されたとき
 ev.receive "keypress", (key) => {
