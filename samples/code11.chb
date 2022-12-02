@@ -1,0 +1,29 @@
+https://scratch.mit.edu/projects/568734887/editor/
+
+splite.new  x:-177, y:-2 -> cat;
+splite.new -> ball;
+Event.new -> ev;
+
+//ネコ
+ev.receive "keypress",(key) => {
+    key.match 
+        "uppararrow".case => { cat.y + 10 -> cat.y; }
+        "downarrow".case => { cat.y -10 -> cat.y; }
+        "space".case => { ev.send "弾を発射する"; }
+}
+
+//ボール
+ev.click "flag",() => {
+    ball.hide;
+}
+
+ev.receive "message",(msg) => {
+    ball.move x:cat.x, y:cat.y;
+    ball.show;
+    true.while {
+        ball.walk 10;
+        ball.x > 230.if {
+            ball.hide;
+        }
+    }
+}
