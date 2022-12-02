@@ -1,0 +1,20 @@
+https://scratch.programming-edu.net/jugyoujirei/hensu.html
+
+Event.new -> ev;
+splite.new -> cat;
+
+0 -> number;
+cat.size 100;
+
+true.while {
+    number + 1 -> number;
+    number % 3 = 0.if {
+        cat.size * 2 -> cat.size;
+        cat.say number;
+        1 |> cat.wait;
+        cat.size / 2 -> cat.size;
+    } else {
+        number |> cat.say;
+        1 |> cat.wait;
+    }
+}
