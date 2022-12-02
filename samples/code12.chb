@@ -1,0 +1,21 @@
+https://scratch.mit.edu/projects/568725755/editor/
+
+Event.new -> ev;
+Know.new -> kn;
+splite.new -> cat;
+splite.new -> apple;
+
+ev.click "flag",() => {
+    true.while {
+        cat.move_mouse;
+    }
+}
+
+ev.click "flag",() => {
+    apple.move_random;
+    true.while {
+        cat,apple |> kn.touching.if{
+            apple.move_random;
+        }
+    }
+}
