@@ -1,0 +1,39 @@
+https://scratch.mit.edu/projects/24113321/editor/
+
+Event.new -> ev;
+//スプライトにおける「調べる」
+Know.new -> kn;
+
+animals.new -> cat;
+fluits.new -> apple;
+
+//ネコ
+
+ev.click "flag",() => {
+  cat.say "りんごをクリックしよう";
+}
+
+ev.receive "message",(msg) => {
+  msg = "message1".if {
+    cat.say "ありがとう";
+    //音関連はまだあまり考えられていない
+    cat.sound meow;
+  }
+}
+
+//りんご
+
+ev.click "flag",() => {
+  apple.show;
+  100 -> apple.y;
+}
+
+ev.click "splite",(name) => {
+  name = "apple".if {
+    cat, apple |> kn.touch = false.while {
+      apple.y - 10 -> apple.y
+    }
+    apple.hide;
+    ev.send "message1";
+  }
+}
