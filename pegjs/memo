@@ -13,7 +13,8 @@ Program プログラム全体を指す
         ArrayLiteral 配列リテラル
       Identifier 識別子
         word 名前
-          Token トークン
+      ReservedWord 予約語
+        Token トークン
           FlaseToken falseトークン
           NullToken nullトークン
           TrueToken trueトークン
