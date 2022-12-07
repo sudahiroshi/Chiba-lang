@@ -1,0 +1,8 @@
+オブジェクト.メソッド
+(1<x).if ()=>{}
+(1~10 step:2).each (i)=>{}
+[1,2,3,4,5].each (i)=>{}
+(a) => { return a * a; } -> 
+(a,b) |> { return a + b; } -> add;
+(a,b) |> add;
+{1<x}.while {}
