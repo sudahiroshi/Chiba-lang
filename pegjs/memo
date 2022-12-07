@@ -1,0 +1,21 @@
+Program プログラム全体を指す
+  ExpressionStatement 式文
+    AssignmentExoression=代入式
+    BinaryExpression=2項式
+    PipelineExpression=パイプライン式
+    RelationExpression=関係式
+    TildaExpression=チルダ式
+      Literal リテラル
+        NumericLiteral 数値リテラル
+        NullLiteral Nullリテラル
+        BooleanLiteral 
+        StringLiteral 文字列リテラル
+        ArrayLiteral 配列リテラル
+      Identifier 識別子
+        word 名前
+          Token トークン
+          FlaseToken falseトークン
+          NullToken nullトークン
+          TrueToken trueトークン
+          Operator オペレーター
+            RelationOperator <= = >= 関係演算子
