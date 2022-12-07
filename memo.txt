@@ -6,3 +6,10 @@
 (a,b) |> { return a + b; } -> add;
 (a,b) |> add;
 {1<x}.while {}
+{ stage.background = 2 }.then {}
+{ 2.seconds }.wait; 2秒経つまで待つ
+{ ev = "文字列" }.wait;　evに文字列が送られるまで待つ
+
+.say "文字列"; 手動で消す
+{2.seconds}.wait;
+.say "";
